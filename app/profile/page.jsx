@@ -28,7 +28,7 @@ function MyProfile() {
       try {
         await fetch(`/api/prompt/${post._id.toString()}`, { method: "DELETE" });
         const filtered = posts.filter((p) => post._id !== p._id);
-        setPosts(filtered)
+        setPosts(filtered);
       } catch (error) {
         console.log(error);
       }
